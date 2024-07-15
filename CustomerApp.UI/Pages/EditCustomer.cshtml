@@ -1,0 +1,22 @@
+﻿@page
+@model CustomerApp.UI.Pages.EditCustomerModel
+@{
+}
+
+<h2>Edit Customer</h2>
+<form method="post">
+    <input type="hidden" asp-for="Customer.Id" />
+    <div class="form-group">
+        <label asp-for="Customer.Name"></label>
+        <input asp-for="Customer.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer.Age"></label>
+        <input asp-for="Customer.Age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Customer.IsActive"></label>
+        <input asp-for="Customer.IsActive" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

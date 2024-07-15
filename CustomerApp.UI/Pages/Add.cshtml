@@ -1,0 +1,27 @@
+﻿@page
+@model CustomerApp.UI.Pages.AddModel
+@{
+}
+<h2>Submit Data</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Data.Name"></label>
+        <input asp-for="Data.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Data.Age"></label>
+        <input asp-for="Data.Age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Data.IsActive"></label>
+        <input asp-for="Data.IsActive" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
